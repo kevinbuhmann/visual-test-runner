@@ -1,0 +1,4 @@
+src/assets/
+dist/
+dist-spec/
+coverage/

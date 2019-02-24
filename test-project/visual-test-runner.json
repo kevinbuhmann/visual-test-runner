@@ -1,0 +1,4 @@
+{
+  "specFileGlobPath": "./**/*.spec.ts",
+  "approveCommand": "node .\\dist\\visual-test-runner-cli.js approve --config .\\test-project\\visual-test-runner.json"
+}

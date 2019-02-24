@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - 8
+  - stable
+os:
+  - linux
+  - osx
+script:
+  - yarn run build
+after_success:
+  - yarn run report-coverage
+addons:
+  artifacts:
+    paths:
+      - $(git ls-files -x node_modules | tr "\n" ":")
+      - $(git ls-files -o -x node_modules | tr "\n" ":")

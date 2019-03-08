@@ -1,3 +1,10 @@
+dist/
+dist-spec/
+tmp/
+
+# temporary visual test data
+test-project/visual-test-data/tmp
+
 # Logs
 logs
 *.log

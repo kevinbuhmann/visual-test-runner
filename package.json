@@ -1,0 +1,55 @@
+{
+  "name": "visual-test-runner",
+  "version": "0.0.0-dev.22",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "visual-test-runner": "./dist/visual-test-runner-cli.js"
+  },
+  "repository": "https://github.com/kevinphelps/visual-test-runner.git",
+  "author": "Kevin Phelps <KevinPhelps11@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "ts-node ./build/lint.ts",
+    "build": "ts-node ./build/build.ts",
+    "test": "ts-node ./build/test.ts",
+    "print-coverage": "istanbul report -t text",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "prepublishOnly": "yarn run build"
+  },
+  "dependencies": {
+    "chalk": "2.4.2",
+    "glob": "7.1.3",
+    "glob-promise": "3.4.0",
+    "looks-same": "6.0.0",
+    "ncp": "2.0.0",
+    "opn-cli": "4.0.0",
+    "progress": "2.0.3",
+    "rimraf": "2.6.3",
+    "ts-node": "8.0.2",
+    "yargs": "13.2.1"
+  },
+  "peerDependencies": {
+    "puppeteer": ">1.0.0"
+  },
+  "devDependencies": {
+    "@types/glob": "7.1.1",
+    "@types/jasmine": "3.3.9",
+    "@types/looks-same": "4.0.1",
+    "@types/node": "11.9.5",
+    "@types/progress": "2.0.3",
+    "@types/puppeteer": "1.12.1",
+    "@types/rimraf": "2.0.2",
+    "@types/yargs": "12.0.9",
+    "codecov": "3.2.0",
+    "istanbul": "0.4.5",
+    "jasmine": "3.3.1",
+    "prettier": "1.16.4",
+    "puppeteer": "1.12.2",
+    "remap-istanbul": "0.13.0",
+    "tslint": "5.13.0",
+    "tslint-consistent-codestyle": "1.15.0",
+    "typescript": "3.3.3333",
+    "typescript-tslint-plugin": "0.3.1"
+  }
+}
